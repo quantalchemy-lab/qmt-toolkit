@@ -19,11 +19,25 @@
 ```text
 QMT-TOOLKIT/
 ├── README.md
-└── test/
-    └── qmt_ipc_test.py       # QMT 通信与运行环境兼容性测试
+├── test/
+│   └── qmt_ipc_test.py       # QMT 通信与运行环境兼容性测试
+└── vscode-debug/             # 大QMT VS Code 断点调试启动器
+    ├── README.md             # 部署与使用说明
+    ├── 启动器/启动器.rzrk     # 加密启动器（导入 QMT）
+    ├── 策略Demo/qmt_strategy_impl.py
+    ├── vscode/launch.json
+    └── scripts/              # 安装 debugpy、检查 QMT 环境
 ```
 
 ## 当前工具
+
+### 大QMT VS Code 断点调试启动器
+
+- **目录：** [`vscode-debug/`](vscode-debug/)，使用说明见 [`vscode-debug/README.md`](vscode-debug/README.md)
+- **用途：** 在 QMT 中运行加密启动器，VS Code 以 attach 方式连接 QMT 进程，对外部策略文件下断点、单步执行、查看变量。
+- **环境：** 内置 Python 3.6.8（64 位）的大QMT，debugpy **1.5.1**；内置 Python 3.12 的客户端未验证。
+- **配套文章：** 公众号「量化炼金术」《大QMT调试终极指南：VSCode断点调试实战，附启动器》。
+- **下载：** 页面右上角 **Code → Download ZIP**，解压后进入 `vscode-debug/` 目录。
 
 ### QMT 通信能力测试
 

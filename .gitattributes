@@ -1,0 +1,4 @@
+*.rzrk binary
+*.zip binary
+*.png binary
+*.bat text eol=crlf

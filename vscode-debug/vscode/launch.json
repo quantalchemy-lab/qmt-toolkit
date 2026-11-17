@@ -1,0 +1,21 @@
+{
+    // 复制到你的策略目录下：<策略目录>\.vscode\launch.json
+    // 需要安装 VS Code 扩展：Python（ms-python.python）、Python Debugger（ms-python.debugpy）
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach QMT",
+            "type": "debugpy",
+            "request": "attach",
+            // 与 QMT 策略参数 debug_port 保持一致
+            "connect": {
+                "host": "127.0.0.1",
+                "port": 5678
+            },
+            // 允许进入第三方库代码（pandas 等）单步
+            "justMyCode": false,
+            // 把 QMT 里 print 的内容转发到 VS Code 调试控制台
+            "redirectOutput": true
+        }
+    ]
+}
